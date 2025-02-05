@@ -82,10 +82,13 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/mens">Desserts</a>
+                <a class="nav-link active" aria-current="page" href="<%= category[2].path%>">Desserts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/womens">Dishes</a>
+                <a class="nav-link active" aria-current="page" href="<%= category[1].path%>">Dishes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="<%= category[0].path%>">Fruits</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -110,7 +113,7 @@
         </div>
       </nav>
 
-    <header>Welcome to Our Food Store</header>
+    <header>Welcome to Eddy's Exotic Market</header>
     <nav>
         <a href="#fruits">Fruits</a>
         <a href="#vegetables">Vegetables</a>
