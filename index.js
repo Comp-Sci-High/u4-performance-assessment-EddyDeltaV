@@ -93,10 +93,15 @@ app.use((req, res, next) => {
 
 app.use(express.static(__dirname + "/public"))
 
-app.get("/mens", (req, res)=>{
+app.get("/fruits", (req, res)=>{
   res.render("category.ejs", inventory[0])
 })
-
+app.get("/dishes", (req, res)=>{
+  res.render("category.ejs", inventory[1])
+})
+app.get("/desserts", (req, res)=>{
+  res.render("category.ejs", inventory[2])
+})
 app.listen(3000, () => {
   console.log("Server running")
 })
