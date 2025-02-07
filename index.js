@@ -76,7 +76,7 @@ const inventory = [
         cost: 89.99,
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauYLrjNmHiiGTWUq-SVw_pXgT1ffhZpJTGQ&s",
         path: "/item/5",
-        quantity: 60,
+        quantity: 0,
       }
         
 ]
@@ -101,6 +101,10 @@ app.get("/dishes", (req, res)=>{
 })
 app.get("/desserts", (req, res)=>{
   res.render("category.ejs", inventory[2])
+})
+app.get("/exotic/:index", (req, res)=>{
+  const itemNum=req.params.index
+  res.render("recipe.ejs", inventory[0].items[itemNum])
 })
 app.listen(3000, () => {
   console.log("Server running")
